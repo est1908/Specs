@@ -13,7 +13,7 @@ license = <<EOT
 EOT
 
 Pod::Spec.new do |s|
-  version = '1.0'
+  version = '1.01'
 
 
   s.name     = 'TouchDB'
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.header_dir = 'TouchDB'
 
-  def s.post_install(target)
+  def s.prepare_command(target)
     src = config.project_pods_root.to_s() + '/TouchDB/Source'
 
     # Prepend some headers manually. The regular build does this with a prefix header, but
